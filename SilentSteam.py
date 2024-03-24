@@ -7,6 +7,8 @@ if len(sys.argv) >= 2 and os.path.isdir(sys.argv[1]):
 else:
     folder = fd.askdirectory()
 
+if not os.path.isdir(folder): sys.exit()
+
 changed = 0
 
 for file in os.listdir(folder):
